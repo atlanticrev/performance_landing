@@ -1,0 +1,204 @@
+@import '../styles/variables';
+@import '../styles/mixins';
+
+.this-course-for-you {
+  width: 100%;
+  height: $this-course-for-you-section-height;
+  background-color: $this-course-for-you-section-background-color;
+  text-align: center;
+  color: $this-course-for-you-section-font-color;
+}
+
+.title-course-for-you {
+  margin: 0 auto;
+  font-weight: bold;
+  font-size: 30px;
+  padding-top: 48px;
+  line-height: 40px;
+  width: 312px;
+}
+
+.advantages {
+  padding: 25px 4px 0;
+  height: 714px;
+
+  b {
+    font-weight: bold;
+  }
+}
+
+.advantage {
+  @include makeFlex(row, unset, unset);
+  width: 312px;
+  margin: 10px auto 0;
+
+  &:last-child {
+    margin-top: 23px;
+  }
+}
+
+%advantage-image {
+  @include squareContainer(100px);
+}
+
+.advantage-image-one {
+  @extend %advantage-image;
+  background: url("../images/mouse.svg") no-repeat center center;
+  background-size: 81px;
+
+}
+.advantage-image-two {
+  @extend %advantage-image;
+  background: url("../images/flag.svg") no-repeat 16px 6px;
+  background-size: 81px;
+
+}
+.advantage-image-three {
+  @extend %advantage-image;
+  background: url("../images/tower_sea.svg") no-repeat 12px 8px;
+  background-size: 77px;
+
+}
+.advantage-image-four {
+  @extend %advantage-image;
+  background: url("../images/mirror.svg") no-repeat 13px 8px;
+  background-size: 77px;
+
+}
+.advantage-image-five {
+  @extend %advantage-image;
+  background: url("../images/education.svg") no-repeat 13px 10px;
+  background-size: 77px;
+
+}
+.advantage-image-six {
+  @extend %advantage-image;
+  background: url("../images/graph.svg") no-repeat 13px 8px;
+  background-size: 82px;
+
+}
+
+.advantage-description {
+  margin-left: 8px;
+  margin-top: 19px;
+  text-align: left;
+  line-height: 27px;
+  font-size: 18px;
+}
+
+@media screen and (min-width: 1280px) {
+  .this-course-for-you {
+    line-height: 77px;
+    letter-spacing: -0.5px;
+    height: unset;
+    min-height: 677px;
+
+    .title-course-for-you {
+      margin: 11px 0 0 17.2%;
+      font-weight: bold;
+      font-size: 61px;
+      text-align: left;
+      padding-top: 22px;
+      width: 558px;
+      max-width: 700px;
+      line-height: 72px;
+    }
+
+    .advantages {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 1285px;
+      height: unset;
+      margin: 71px auto 0;
+      padding: unset;
+
+      .advantage {
+        width: 428px;
+        height: 170px;
+        margin: 13px 0 -1px 0;
+
+        .advantage-description {
+          margin: unset;
+          text-align: left;
+          font-size: 18.3px;
+          letter-spacing: -0.2px;
+          line-height: 31px;
+          width: 200px;
+        }
+
+        .advantage-image-one {
+          width: 174px;
+          height: 150px;
+          background: url("../images/mouse.svg") no-repeat 36px 21px;
+          background-size: 120px;
+
+        }
+
+        .advantage-image-two {
+          width: 175px;
+          height: 150px;
+          background: url("../images/flag.svg") no-repeat 54px 14px;
+          background-size: 119px;
+
+        }
+
+        .advantage-image-three {
+          width: 150px;
+          height: 150px;
+          background: url("../images/tower_sea.svg") no-repeat 35px 19px;
+          background-size: 110px;
+
+        }
+
+        .advantage-image-four {
+          width: 173px;
+          height: 150px;
+          background: url("../images/mirror.svg") no-repeat 41px 28px;
+          background-size: 111px;
+
+        }
+
+        .advantage-image-five {
+          width: 175px;
+          height: 150px;
+          background: url("../images/education.svg") no-repeat 54px 29px;
+          background-size: 110px;
+
+        }
+
+        .advantage-image-six {
+          width: 167px;
+          height: 150px;
+          background: url("../images/graph.svg") no-repeat 33px 22px;
+          background-size: 120px;
+        }
+
+        .advantage-description-one {
+          padding: 44px 0 0 0;
+        }
+
+        .advantage-description-two {
+          padding: 44px 0 0 11px;
+        }
+
+        .advantage-description-three {
+          padding: 44px 0 0 18px;
+        }
+
+        .advantage-description-four {
+          padding: 52px 0 0 0;
+        }
+
+        .advantage-description-five {
+          padding: 52px 0 0 10px;
+        }
+
+        .advantage-description-six {
+          padding: 52px 0 0 0;
+        }
+      }
+    }
+  }
+}

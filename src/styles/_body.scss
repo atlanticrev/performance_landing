@@ -1,0 +1,37 @@
+@import '../styles/variables';
+@import '../styles/mixins';
+
+body {
+  font-family: Lato, Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+
+  background: $main-background-color;
+
+  .colored-dot, .colored-slash {
+    color: $decoration-dot-color;
+  }
+
+  a {
+    text-decoration: none;
+    color: $link;
+  }
+
+  *:focus {
+    outline: none;
+  }
+
+  .hide {
+    display: none !important;
+  }
+
+  .inner-error-border {
+    -webkit-appearance: none;
+    box-shadow: inset 0 0 0 1px $error;
+    -webkit-box-shadow: inset 0 0 0 1px $error;
+    -moz-box-shadow: inset 0 0 0 1px $error;
+  }
+
+  @media screen and (min-width: 1280px) {
+    background: $white;
+  }
+}

@@ -1,0 +1,679 @@
+@import '../styles/variables';
+@import '../styles/mixins';
+
+.resume {
+  width: 282px;
+  height: $resume-section-height;
+  background-color: $resume-section-background-color;
+  margin: 1px auto 0;
+  border-radius: 11px;
+
+  .resume-head {
+    height: 192px;
+    border-radius: 11px 11px 0 0;
+    background: url("../images/bg_mobile_long.png") no-repeat;
+    color: $white;
+
+    .resume-head-title {
+      padding: 18px 12px 0;
+      font-size: 30px;
+      font-weight: bold;
+      line-height: 40px;
+    }
+
+    .resume-head-description {
+      margin-top: 9px;
+      padding: 0 13px;
+      font-size: 18px;
+      line-height: 32px;
+      letter-spacing: -0.13px;
+    }
+  }
+
+  .resume-body {
+    color: $blue;
+    padding: 0 12px;
+
+    .avatar {
+      position: relative;
+      height: 225px;
+
+      .border {
+        @include squareContainer(128px);
+        position: absolute;
+        top: 53px;
+        left: 64px;
+        border-top-left-radius: 100%;
+        border-bottom-left-radius: 100%;
+        background-color: #dbdbe3;
+        z-index: 0;
+      }
+
+      .image-one {
+        @include squareContainer(115px);
+        background: url("../images/girl_2.png") no-repeat -51px -36px;
+        position: absolute;
+        top: 60px;
+        left: 72px;
+        border-radius: 100%;
+        z-index: 2;
+      }
+
+      .white-space {
+        position: absolute;
+        top: 10px;
+        left: 130px;
+        width: 105px;
+        height: 210px;
+        background-color: white;
+        z-index: 1;
+      }
+    }
+
+    .resume-main-information {
+      .resume-main-information-title {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 18px;
+        letter-spacing: 0.12px;
+        line-height: 23px;
+      }
+
+      .resume-main-information-city {
+        margin-top: 18px;
+        font-size: 17px;
+        letter-spacing: 0.15px;
+      }
+
+      .resume-main-information-profession {
+        text-transform: uppercase;
+        margin-top: 17px;
+        line-height: 21px;
+        letter-spacing: -1.22px;
+      }
+
+      .resume-main-information-specialization {
+        margin-top: 11px;
+        line-height: 23px;
+        letter-spacing: 0.55px;
+      }
+    }
+
+    .resume-contacts {
+      height: 131px;
+      margin-top: 23px;
+      border-top: 1px solid $light-gray;
+
+      .resume-contacts-title {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 18px;
+        padding-top: 27px;
+        letter-spacing: 0.2px;
+      }
+
+      p {
+        margin-top: 12px;
+        letter-spacing: 1.5px;
+        color: transparent;
+        text-shadow: 0 0 8px #000;
+      }
+    }
+
+    .resume-skills {
+      height: 1300px;
+      border-top: 1px solid $light-gray;
+
+      .skills {
+        width: 245px;
+        list-style: none;
+        margin: 22px 0 0 15px;
+        line-height: 24px;
+        font-size: 18px;
+        padding-bottom: 24px;
+
+        ::before {
+          position: absolute;
+          content: "•";
+          top: -1;
+          left: -14px;
+          color: $decoration-dot-color;
+          font-size: 30px;
+        }
+      }
+
+      .skill {
+        position: relative;
+        margin-top: 12px;
+
+        &:nth-of-type(5) {
+          line-height: 23px;
+        }
+
+        &:nth-of-type(6) {
+          line-height: 22px;
+        }
+
+        &:nth-of-type(7) {
+          line-height: 23px;
+        }
+
+        &:nth-of-type(8) {
+          line-height: 23px;
+        }
+      }
+
+      .resume-work-with-platforms {
+        border-top: 1px solid $light-gray;
+        padding-top: 26px;
+        height: 288px;
+
+        h3 {
+          text-transform: uppercase;
+          font-size: 20px;
+          text-align: center;
+          line-height: 24px;
+          letter-spacing: -1.3px;
+          font-weight: bold;
+        }
+
+        .brands-images {
+          @include makeFlex(row, center, center);
+          flex-wrap: wrap;
+          width: 200px;
+          height: 230px;
+          margin: 0 auto;
+
+          img {
+            position: relative;
+          }
+
+          img:nth-of-type(1) {
+            top: 7px;
+            right: 15px;
+          }
+
+          img:nth-of-type(2) {
+            top: 8px;
+            left: 14px;
+          }
+
+          img:nth-of-type(3) {
+            top: 1px;
+            right: 13px;
+          }
+
+          img:nth-of-type(4) {
+            top: 1px;
+            left: 13px;
+          }
+
+          img:nth-of-type(5) {
+            bottom: 1px;
+            right: 30px;
+          }
+
+          img:nth-of-type(6) {
+            bottom: 1px;
+            left: 28px;
+          }
+        }
+      }
+
+      .targeting-images {
+        @include makeFlex(row, center, center);
+        flex-wrap: wrap;
+        border-top: 1px solid #e8e8ed;
+        padding-top: 9px;
+        width: 258px;
+        height: 188px;
+        font-size: 18px;
+
+        img {
+          position: relative;
+        }
+
+        img:nth-of-type(1) {
+          top: 3px;
+          right: 3px;
+        }
+
+        img:nth-of-type(2) {
+          top: 3px;
+          left: 11px;
+        }
+
+        img:nth-of-type(3) {
+          bottom: 12px;
+          right: 1px;
+        }
+      }
+    }
+
+    .soft-for-graphics {
+      @include makeFlex(row, center, center);
+      flex-wrap: wrap;
+      position: relative;
+      border-top: 1px solid #e8e8ed;
+      padding-top: 9px;
+      width: 258px;
+      height: 150px;
+      font-size: 18px;
+      margin: 0 auto;
+
+      h4 {
+        position: relative;
+        bottom: 2px;
+      }
+
+      img {
+        position: relative;
+      }
+
+      img:nth-of-type(1) {
+        bottom: 7px;
+        right: 27px;
+      }
+
+      img:nth-of-type(2) {
+        bottom: 7px;
+        right: 1px;
+      }
+
+      img:nth-of-type(3) {
+        bottom: 7px;
+        left: 25px;
+      }
+    }
+
+    .analytics-images {
+      @include makeFlex(row, center, center);
+      flex-wrap: wrap;
+      position: relative;
+      border-top: 1px solid #e8e8ed;
+      padding-top: 2px;
+      width: 258px;
+      height: 150px;
+      font-size: 18px;
+
+      h4 {
+        position: relative;
+        top: 3px;
+      }
+
+      img {
+        position: relative;
+      }
+
+      img:nth-of-type(1) {
+        bottom: 14px;
+        left: 16px;
+      }
+
+      img:nth-of-type(2) {
+        bottom: 16px;
+        left: 32px;
+      }
+
+      img:nth-of-type(3) {
+        top: 18px;
+        left: 62px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .resume {
+    box-sizing: border-box;
+    background-color: $gray;
+    border-radius: 0;
+    width: 100%;
+    margin-top: 0;
+    height: 1264px;
+
+    .resume-head {
+      margin: 0 auto;
+      background-size: cover;
+      height: 166px;
+      width: 1202px;
+
+      .resume-head-title {
+        text-align: center;
+        padding: 38px 13px 0;
+        text-transform: uppercase;
+        font-size: 35.2px;
+
+        br {
+          display: none;
+        }
+      }
+
+      .resume-head-description {
+        text-align: center;
+        margin-top: 17px;
+        font-size: 20.3px;
+
+        br {
+          display: none;
+        }
+      }
+    }
+
+    .resume-body {
+      margin: 0 auto;
+      width: 1178px;
+      background-color: $white;
+      padding-bottom: 70px;
+      border-bottom-left-radius: 7px;
+      border-bottom-right-radius: 7px;
+
+      .avatar {
+        display: inline-block;
+        vertical-align: top;
+        width: 197px;
+        height: 197px;
+        margin-left: 11px;
+
+        .border {
+          @include squareContainer(130px);
+          top: 34px;
+          left: 48px;
+        }
+
+        .white-space {
+          left: 113px;
+          width: 70px;
+          height: 180px;
+        }
+
+        .image-one {
+          @include squareContainer(118px);
+          width: 118px;
+          height: 118px;
+          top: 39px;
+          left: 53px;
+          background-position: -47px -33px;
+        }
+      }
+
+      .resume-main-information {
+        display: inline-block;
+        vertical-align: top;
+        margin: 50px 0 0 0;
+        width: 31.6%;
+
+        br {
+          display: none;
+        }
+
+        .resume-main-information-title {
+          font-size: 17.25px;
+          letter-spacing: 0;
+        }
+
+        .resume-main-information-city {
+          margin-top: 8px;
+        }
+
+        .resume-main-information-profession {
+          margin-top: 7px;
+        }
+
+        .resume-main-information-specialization {
+          margin-top: 5px;
+          letter-spacing: -0.5px;
+          font-size: 18px;
+        }
+      }
+
+      .resume-contacts {
+        display: inline-block;
+        vertical-align: top;
+        border: 0;
+        border-left: 2px solid $gray;
+        height: 116px;
+        width: 384px;
+        margin-top: 41px;
+        padding-left: 61px;
+
+        .resume-contacts-title {
+          padding-top: 9px;
+          letter-spacing: -0.5px;
+        }
+      }
+
+      .resume-skills {
+        border-top: 2px solid #e8e8ed;
+        width: 90%;
+        margin: 3px auto 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: unset;
+        align-items: flex-start;
+
+        .skills {
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: flex-start;
+          flex-wrap: wrap;
+          padding-bottom: 39px;
+          margin-left: 50px;
+
+          .skill {
+            br {
+              display: none;
+            }
+
+            margin-top: 15px;
+            width: 40%;
+            padding-right: 10%;
+
+            &:before {
+              left: -20px;
+            }
+          }
+
+          .skill:nth-child(5) {
+            margin-top: -10px;
+          }
+
+          .skill:nth-child(7) {
+            margin-top: -8px;
+          }
+        }
+
+        .resume-work-with-platforms {
+          border: 0;
+          background-color: $light-gray;
+          margin-top: 3px;
+          border-radius: 7px;
+          height: 147px;
+          padding-top: 35px;
+          width: 1169px;
+
+          .platforms {
+            br {
+              display: none;
+            }
+
+            font-size: 20px;
+            margin-bottom: 52px;
+          }
+
+          .brands-images {
+            height: 0;
+            width: 90%;
+            position: relative;
+            flex-wrap: nowrap;
+
+            img {
+              margin-left: 82px;
+              display: block;
+              transform: scale(1.25);
+            }
+
+            img:first-child {
+              margin-left: 0;
+              top: 3px;
+              right: 0;
+            }
+
+            img:nth-child(2) {
+              top: 6px;
+              left: 4px;
+            }
+
+            img:nth-child(3) {
+              top: 6px;
+              left: 247px;
+            }
+
+            img:nth-child(4) {
+              top: 5px;
+              right: 111px;
+              left: unset;
+            }
+
+            img:nth-child(5) {
+              bottom: -6px;
+              right: -14px;
+            }
+
+            img:nth-child(6) {
+              bottom: -6px;
+              left: 14px;
+            }
+          }
+        }
+
+        .targeting-images {
+          border: 0;
+          margin-top: 13px;
+          border-radius: 7px;
+          flex-direction: column;
+          padding: 0;
+          flex-wrap: nowrap;
+          background-color: $light-gray;
+          width: 345px;
+          height: 229px;
+
+          .platforms {
+            margin-bottom: 10%;
+            font-size: 18px;
+          }
+
+          img {
+            transform: scale(1.1);
+          }
+
+          img:nth-of-type(1) {
+            top: 2%;
+            right: 82px;
+          }
+
+          img:nth-of-type(2) {
+            top: -13%;
+            right: -65px;
+            left: unset;
+          }
+
+          img:nth-of-type(3) {
+            bottom: 1%;
+          }
+        }
+
+        .soft-for-graphics {
+          border: 0;
+          margin-top: 13px;
+          border-radius: 7px;
+          flex-direction: column;
+          padding: 0;
+          flex-wrap: nowrap;
+          background-color: $light-gray;
+          width: 345px;
+          height: 229px;
+
+          .graphics-programs {
+            bottom: 19%;
+            font-size: 18px;
+          }
+
+          .graphics-programs-icons {
+            position: relative;
+            top: 12.6%;
+
+            img {
+              transform: scale(1);
+            }
+
+            img:nth-of-type(1) {
+              bottom: 18px;
+              right: 28px;
+            }
+
+            img:nth-of-type(2) {
+              bottom: 18px;
+              right: 2px;
+            }
+
+            img:nth-of-type(3) {
+              bottom: 18px;
+              left: 24px;
+            }
+          }
+        }
+
+        .analytics-images {
+          position: relative;
+          border: 0;
+          margin-top: 13px;
+          border-radius: 7px;
+          flex-direction: column;
+          padding: 0;
+          flex-wrap: nowrap;
+          background-color: $light-gray;
+          width: 345px;
+          height: 229px;
+
+          .web-analytics {
+            position: relative;
+            top: -21%;
+            font-size: 18px;
+          }
+
+          .analytics-images-icons {
+            position: relative;
+            top: 5%;
+          }
+
+          img {
+            transform: scale(1.25);
+          }
+
+          img:nth-of-type(1) {
+            bottom: 11px;
+            right: -44px;
+            left: unset;
+          }
+
+          img:nth-of-type(2) {
+            bottom: 13px;
+            right: -93px;
+            left: unset;
+          }
+
+          img:nth-of-type(3) {
+            top: 35px;
+            left: 107px;
+          }
+        }
+      }
+    }
+  }
+}
+
+

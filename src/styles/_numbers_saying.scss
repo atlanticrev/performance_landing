@@ -1,0 +1,345 @@
+@import '../styles/variables';
+@import '../styles/mixins';
+
+.numbers-saying {
+  position: relative;
+  margin-top: 36px;
+  background-color: $numbers-saying-section-background-color;
+  color: $numbers-saying-section-font-color;
+  padding: 62px 10px 25px;
+
+  h2 {
+    position: relative;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 36px;
+
+    span {
+      position: relative;
+      left: 2px;
+    }
+
+    .colored-dot {
+      position: absolute;
+      left: 175px;
+    }
+  }
+
+  .numbers-saying-description {
+    width: 295px;
+    text-align: center;
+    margin: 17px auto 0;
+    line-height: 22px;
+
+    span {
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+  }
+
+  .numbers-saying-note {
+    width: 295px;
+    text-align: center;
+    margin: 25px auto 0;
+    line-height: 22px;
+    font-style: italic;
+  }
+
+  .numbers-saying-slider {
+    position: relative;
+    height: 92px;
+    width: 300px;
+    margin: 0 auto;
+
+    .slider-button-left-back {
+      position: relative;
+      top: 23px;
+      left: 6px;
+      width: 60px;
+      height: 43px;
+      @include gradient(to right, rgba(199, 199, 210, 1), rgba(199, 199, 210, 0));
+      border-radius: 20px;
+      z-index: 1;
+    }
+
+    .slider-button-right-back {
+      position: relative;
+      bottom: 21px;
+      left: 234px;
+      width: 60px;
+      height: 44px;
+      @include gradient(to left, rgba(199, 199, 210, 1), rgba(199, 199, 210, 0));
+      border-radius: 20px;
+      z-index: 1;
+    }
+
+    .slider-button-left-vacancy {
+      background-color: $blue;
+      position: absolute;
+      left: 9px;
+      top: 27px;
+      width: 54px;
+      height: 34px;
+      border-radius: 20px;
+      z-index: 4;
+      cursor: pointer;
+
+      &:active {
+        opacity: 0.8;
+      }
+
+      .slider-arrow-icon {
+        background: url("../images/arrow-white.svg") no-repeat center center;
+        position: relative;
+        top: 12px;
+        left: 9px;
+        background-size: 9px;
+        width: 10px;
+        height: 10px;
+        transform: rotate(180deg);
+      }
+    }
+
+    .slider-button-right-vacancy {
+      background-color: $blue;
+      position: absolute;
+      left: 237px;
+      top: 27px;
+      width: 54px;
+      height: 34px;
+      border-radius: 20px;
+      z-index: 4;
+      cursor: pointer;
+
+      &:active {
+        opacity: 0.8;
+      }
+
+      .slider-arrow-icon {
+        background: url("../images/arrow-white.svg") no-repeat center center;
+        position: relative;
+        top: 11px;
+        left: 35px;
+        background-size: 9px;
+        width: 10px;
+        height: 10px;
+        transform: rotate(0deg);
+      }
+    }
+
+    .numbers-saying-slider-dots {
+      @include makeFlex(row, center, center);
+      position: absolute;
+      bottom: 39px;
+      right: 106px;
+      width: 100px;
+      height: 20px;
+
+      .numbers-saying-slider-dot {
+        width: 9px;
+        height: 9px;
+        border-radius: 50px;
+        background-color: $gray;
+        margin-left: 10px;
+        cursor: pointer;
+
+        -webkit-transition: opacity 0.5s;
+        -moz-transition: opacity 0.5s;
+        -o-transition: opacity 0.5s;
+        transition: opacity 0.5s;
+      }
+
+      .numbers-saying-slider-dot:first-child {
+        background-color: $blue;
+      }
+    }
+  }
+
+  .numbers-saying-image-container {
+    width: 284px;
+    margin: 0 auto;
+    height: 1010px;
+    position: relative;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
+
+  .numbers-saying-image {
+    -webkit-transition: opacity 0.5s;
+    -moz-transition: opacity 0.5s;
+    -o-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+  }
+
+  .numbers-saying-image-one {
+    width: 100%;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("../images/vacancy_1.png") no-repeat left top;
+    background-size: 284px;
+    opacity: 1;
+  }
+
+  .numbers-saying-image-two {
+    width: 100%;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("../images/vacancy_2.png") no-repeat left top;
+    background-size: 284px;
+    opacity: 0;
+  }
+
+  .numbers-saying-image-three {
+    width: 100%;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("../images/vacancy_3.png") no-repeat left top;
+    background-size: 284px;
+    opacity: 0;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .numbers-saying {
+    margin-top: 62px;
+    padding-bottom: 104px;
+
+    .numbers-saying-title {
+      font-size: 62px;
+      font-weight: bold;
+      right: -7px;
+      bottom: 12px;
+      letter-spacing: -0.9px;
+
+      br {
+        display: none;
+      }
+
+      span {
+        left: -6px;
+      }
+
+      .colored-dot {
+        left: 351px;
+        bottom: 20px;
+      }
+    }
+
+    .numbers-saying-description {
+      br:nth-of-type(1) {
+        display: none;
+      }
+
+      br:nth-of-type(3) {
+        display: none;
+      }
+
+      br:nth-of-type(4) {
+        display: none;
+      }
+
+      br:nth-of-type(5) {
+        display: none;
+      }
+
+      span {
+        letter-spacing: -0.4px;
+      }
+
+      width: 50%;
+      margin-top: 29px;
+      font-size: 20px;
+      line-height: 32px;
+    }
+
+    .numbers-saying-note {
+      br {
+        display: none;
+      }
+    }
+
+    .numbers-saying-slider {
+      position: absolute;
+      width: 1200px;
+      top: 54.5%;
+      left: 3%;
+      right: 3%;
+
+      .slider-button-left-vacancy {
+        background-color: $gray;
+        left: unset;
+        top: 22px;
+        width: 90px;
+        height: 43px;
+
+        .slider-arrow-icon {
+          background: url("../images/arrow_black.svg") no-repeat center center;
+          background-size: 16px;
+          width: 27px;
+          height: 20px;
+        }
+      }
+
+      .slider-button-right-back {
+        bottom: -16px;
+        left: 92.5%;
+        width: 92px;
+        height: 55px;
+        border-radius: 28px;
+      }
+
+      .slider-button-right-vacancy {
+        left: 92%;
+        top: 22px;
+        width: 91px;
+        height: 43px;
+        border-radius: 21px;
+
+        .slider-arrow-icon {
+          top: 9px;
+          left: 55px;
+          background-size: 16px;
+          width: 25px;
+          height: 25px;
+        }
+      }
+
+      .slider-button-left-back {
+        display: none;
+      }
+
+      .numbers-saying-slider-dots {
+        display: none;
+      }
+    }
+
+    .numbers-saying-image-container {
+      width: 979px;
+      height: 714px;
+      margin-top: 20px;
+    }
+
+    .numbers-saying-image-one {
+      background: url("../images/desktop_slider_image_one.png") no-repeat center center;
+      background-size: 100% 100%;
+    }
+
+    .numbers-saying-image-two {
+      //display: none;
+      background: url("../images/desktop_slider_image_two.png") no-repeat center center;
+      background-size: 100% 100%;
+    }
+
+    .numbers-saying-image-three {
+      //display: none;
+      background: url("../images/desktop_slider_image_three.png") no-repeat center center;
+      background-size: 100% 100%;
+    }
+  }
+}

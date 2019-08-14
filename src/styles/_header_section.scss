@@ -1,0 +1,404 @@
+@import '../styles/variables';
+@import '../styles/mixins';
+
+header {
+  background-image: url("../images/bg_mobile.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: $header-section-height;
+  padding: 2px 7px 0;
+  background-color: $header-section-background-color;
+  color: $header-section-font-color;
+  text-align: center;
+  position: relative;
+}
+
+.header-section {
+  width: 100%;
+}
+
+.head {
+  @include makeFlex(row, space-between, center);
+}
+
+.logo-header {
+  @include squareContainer(100px);
+  display: block;
+  background: url("../images/logo_ms_mobile.png") no-repeat center center;
+  background-size: auto;
+  cursor: pointer;
+}
+
+.menu {
+  @include squareContainer(100px);
+  background: url("../images/menu.svg") no-repeat 60px 42px;
+  background-size: 28px;
+  cursor: pointer;
+}
+
+.menu-desktop {
+  display: none;
+}
+
+.sign-up-button-desktop {
+  display: none;
+}
+
+.name {
+  text-transform: uppercase;
+  margin-top: 41px;
+  font-size: 13px;
+}
+
+.text {
+  margin-top: 20px;
+}
+
+.from-zero {
+  display: block;
+  margin: 0 auto;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 78px;
+  text-align: center;
+}
+
+.to-profession {
+  text-transform: uppercase;
+  display: block;
+  margin: 8px auto 0;
+  font-size: 36px;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+.description {
+  line-height: 28px;
+  width: 309px;
+  margin: 20px auto 0;
+}
+
+.button-participate {
+  background: url("../images/button_participate.png") no-repeat -16px -5px;
+  background-size: auto;
+  width: 225px;
+  margin: 0 auto;
+  height: 80px;
+  cursor: pointer;
+}
+
+.button-participate {
+  position: relative;
+  line-height: 80px;
+  margin-top: 15px;
+  text-align: center;
+
+  .button-participate-span {
+    font-size: 17px;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 88.5vw;
+  height: 100vh;
+  padding: 30px 0 0;
+  background-color: rgba(6, 3, 36, 0.9);
+
+  ul {
+    margin-top: 19px;
+    font-size: 20px;
+    height: 330px;
+
+    li {
+      list-style: none;
+      height: 55px;
+      padding-right: 23px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+      color: #c4c4c4;
+      font-weight: bold;
+      cursor: pointer;
+
+      &:hover {
+        color: white;
+        background-color: rgba(31, 29, 58, 0.8);
+      }
+    }
+  }
+
+  .close-button {
+    position: relative;
+    height: 50px;
+    cursor: pointer;
+
+    .cross-mark {
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      right: 20px;
+      top: 5px;
+      background: url("../images/close.svg") no-repeat 17px 7px;
+      background-size: 21px;
+    }
+  }
+
+  .sign-up-button {
+    background: url("../images/white_button.png") no-repeat -13px -11px;
+    width: 206px;
+    height: 80px;
+    margin: 23px auto 0;
+    cursor: pointer;
+
+    &:active {
+      opacity: 0.7;
+    }
+
+    span {
+      color: $blue;
+      line-height: 62px;
+      font-size: 18px;
+    }
+  }
+
+  .button-down {
+    display: none;
+  }
+
+  .second-shadow-layer {
+    display: none;
+  }
+
+  .first-shadow-layer {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  header {
+    background: unset;
+    height: 870px;
+    padding: 0;
+
+    .header-section {
+      background: url("../images/bg_desktop_new.png") no-repeat top center;
+      background-size: 100% 99.3%;
+      height: 870px;
+    }
+
+    .head {
+      justify-content: space-between;
+      height: 125px;
+      width: 93.2%;
+      margin: 0 auto;
+
+      .logo-header {
+        @include squareContainer(115px);
+        background-image: url("../images/ms_logo_vector.png");
+        background-size: 98px;
+        position: relative;
+        top: 2px;
+        margin-left: 3.3%;
+      }
+
+      .menu {
+        display: none;
+      }
+
+      .menu-desktop {
+        display: flex;
+        height: 91px;
+        background: transparent;
+        white-space: nowrap;
+        position: absolute;
+        left: 30.4%;
+        top: 14px;
+        width: 753px;
+
+        ul {
+          display: flex;
+          width: 100%;
+
+          li {
+            margin-left: 5%;
+            font-size: 18px;
+            text-align: center;
+            padding: 0 0 10px;
+            line-height: 100px;
+            color: #c4c4c4;
+            opacity: 0.8;
+            cursor: pointer;
+
+            &:hover {
+              background: unset;
+              border-bottom: 2px solid white;
+              color: $white;
+              opacity: 1;
+            }
+          }
+
+          li:first-child {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+
+    .sign-up-button-desktop {
+      display: block;
+      background: url("../images/white_button.png") no-repeat center center;
+      background-size: 241px;
+      position: relative;
+      top: 12px;
+      right: 44px;
+      width: 242px;
+      height: 100px;
+      cursor: pointer;
+
+      &:active {
+        opacity: 0.7;
+      }
+
+      span {
+        position: relative;
+        color: $blue;
+        font-size: 18px;
+        line-height: 77px;
+        right: 3px;
+      }
+    }
+
+    .name {
+      text-align: left;
+      font-size: 18px;
+      width: 65.7%;
+      margin: 142px auto 0;
+      letter-spacing: 3.35px;
+    }
+
+    .text {
+      display: flex;
+      flex-direction: column;
+      width: 65.7%;
+      margin: 0 auto;
+
+      h1 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: unset;
+        margin-top: 31px;
+
+        span:first-child {
+          font-size: 3.7rem;
+          margin: 0;
+          white-space: nowrap;
+          letter-spacing: 0.5px;
+        }
+
+        span:last-child {
+          margin: 0 0 0 16px;
+          font-size: 3.7rem;
+          white-space: nowrap;
+          letter-spacing: 1px;
+        }
+      }
+
+      p {
+        width: 770px;
+        text-align: start;
+        font-size: 20px;
+        margin: 24px 0 0;
+        line-height: 32px;
+        letter-spacing: -0.1px;
+      }
+    }
+
+    .button-participate {
+      margin-left: 17.1%;
+      margin-top: 42px;
+
+      span {
+        left: 69px;
+        top: -5px
+      }
+    }
+
+    .header-button-down {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      @include squareContainer(120px);
+      border-radius: 50px;
+      margin: 155px 0 0 46.75%;
+      cursor: pointer;
+    }
+
+    .button-down {
+      z-index: 4;
+      background-color: $white;
+      border-radius: 50px;
+      @include squareContainer(53px);
+
+      .arrow-down {
+        width: 53px;
+        height: 57px;
+        background: url("../images/arrow_black.svg") no-repeat center center;
+        background-size: 15px;
+        transform: rotate(90deg);
+      }
+    }
+
+    .second-shadow-layer {
+      box-sizing: border-box;
+      display: block;
+      position: absolute;
+      width: 104px;
+      height: 104px;
+      border-bottom: 44px solid white;
+      @include gradient(to bottom, rgba(46, 34, 92, 1), rgba(46, 34, 92, 0));
+      border-top-left-radius: 50%;
+      border-top-right-radius: 50%;
+      transform: rotate(3.5deg);
+      z-index: 1;
+    }
+
+    .first-shadow-layer {
+      box-sizing: border-box;
+      display: block;
+      position: absolute;
+      @include squareContainer(78px);
+      border-bottom: 32px solid white;
+      @include gradient(to bottom, rgba(22, 63, 109, 1), rgba(22, 63, 109, 0));
+      border-top-left-radius: 50%;
+      border-top-right-radius: 50%;
+      transform: rotate(3.5deg);
+      z-index: 2;
+    }
+
+    .header-button-white-space {
+      display: block;
+      z-index: 3;
+      background-color: $white;
+      width: 136px;
+      margin-top: 29px;
+      height: 34px;
+      position: absolute;
+      transform: rotate(6.5deg);
+    }
+  }
+}
+
+
+

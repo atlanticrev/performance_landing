@@ -1,0 +1,277 @@
+@import '../styles/variables';
+@import '../styles/mixins';
+
+footer {
+  background: url("../images/bg_mobile.png") no-repeat top left;
+  background-size: cover;
+  width: 100%;
+  height: $footer-section-height;
+  position: relative;
+  color: $footer-section-font-color;
+
+  .button-with-arrow {
+    background-image: url("../images/arrow.svg");
+    transform: rotate(-90deg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 15px;
+    width: 54px;
+    height: 54px;
+    background-color: $white;
+    border-radius: 50px;
+    margin: 0 auto;
+    position: relative;
+    bottom: 27px;
+    cursor: pointer;
+  }
+
+  .footer-button-up {
+    display: none;
+  }
+
+  .logo-footer {
+    display: block;
+    background: url("../images/ms_logo_vector.png") no-repeat center center;
+    position: relative;
+    bottom: 13px;
+    right: 3px;
+    width: 90px;
+    height: 70px;
+    margin: 0 auto;
+    background-size: 87px;
+    cursor: pointer;
+  }
+
+  .phone {
+    @include makeFlex(row, center, center);
+    width: 240px;
+    height: 40px;
+    margin: 0 auto;
+    position: relative;
+    cursor: pointer;
+
+    .phone-image {
+      @include squareContainer(15px);
+      background: url("../images/smartphone.svg") no-repeat;
+      position: relative;
+      right: 25px;
+      top: 3px;
+    }
+
+    span {
+      position: relative;
+      font-size: 18px;
+      top: 2px;
+      right: 9px;
+    }
+  }
+
+  .email {
+    @include makeFlex(row, center, center);
+    width: 240px;
+    height: 40px;
+    margin: 0 auto;
+    position: relative;
+    cursor: pointer;
+
+    .email-image {
+      @include squareContainer(16px);
+      background: url("../images/mail.svg") no-repeat;
+      position: relative;
+      right: 11px;
+      top: 0;
+    }
+
+    span {
+      position: relative;
+      font-size: 18px;
+      bottom: 4px;
+      left: 5px;
+    }
+  }
+
+  .buttons-back-panel {
+    @include makeFlex(row, center, center);
+    @include gradient(to right, rgba(46, 34, 92, 1), rgba(46, 34, 92, 0));
+    border-radius: 50px;
+    position: relative;
+    right: 1px;
+    width: 187px;
+    height: 65px;
+    margin: 23px auto 0;
+
+    .channel-button {
+      display: block;
+      position: relative;
+      width: 45px;
+      height: 45px;
+      border-radius: 50px;
+      background-image: linear-gradient( -75deg, rgb(168,17,162) 0%, rgb(246,1,143) 100%);
+    }
+
+    .channel-button:first-of-type {
+      position: relative;
+      right: 15px;
+      cursor: pointer;
+
+      &:active {
+        opacity: 0.7;
+      }
+
+      .icon {
+        position: relative;
+        top: -1px;
+        left: 0;
+        background: transparent url("../images/channels/facebook.svg") no-repeat center center;
+        background-size: 20px;
+        @include squareContainer(45px);
+      }
+    }
+
+    .channel-button:nth-of-type(2) {
+      position: relative;
+      cursor: pointer;
+
+      &:active {
+        opacity: 0.7;
+      }
+
+      .icon {
+        position: relative;
+        top: 0;
+        left: 0;
+        background: transparent url("../images/channels/vk.svg") no-repeat center center;
+        background-size: 21px;
+        @include squareContainer(45px);
+      }
+    }
+
+    .channel-button:last-of-type {
+      position: relative;
+      left: 15px;
+      cursor: pointer;
+
+      &:active {
+        opacity: 0.7;
+      }
+
+      .icon {
+        position: relative;
+        top: 0;
+        left: 1px;
+        background: transparent url("../images/channels/instagram.svg") no-repeat center center;
+        background-size: 21px;
+        @include squareContainer(45px);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  footer {
+    background: url("../images/bg_mobile_long.png") no-repeat center center;
+    background-size: cover;
+    height: 206px;
+
+    .button-with-arrow {
+      display: none;
+    }
+
+    .footer-button-up {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      @include squareContainer(120px);
+      border-radius: 50px;
+      margin: 0 auto;
+      transform: rotate(180deg);
+      position: relative;
+      bottom: 59px;
+      cursor: pointer;
+    }
+
+    .button-down {
+      z-index: 4;
+      background-color: $white;
+      border-radius: 50px;
+      @include squareContainer(53px);
+
+      .arrow-down {
+        width: 53px;
+        height: 57px;
+        background: url("../images/arrow_black.svg") no-repeat center center;
+        background-size: 15px;
+        transform: rotate(90deg);
+      }
+    }
+
+    .second-shadow-layer {
+      box-sizing: border-box;
+      display: block;
+      position: absolute;
+      width: 104px;
+      height: 104px;
+      border-bottom: 44px solid white;
+      @include gradient(to bottom, rgba(46, 34, 92, 1), rgba(46, 34, 92, 0));
+      border-top-left-radius: 50%;
+      border-top-right-radius: 50%;
+      transform: rotate(3.5deg);
+      z-index: 1;
+    }
+
+    .first-shadow-layer {
+      box-sizing: border-box;
+      display: block;
+      position: absolute;
+      @include squareContainer(78px);
+      border-bottom: 32px solid white;
+      @include gradient(to bottom, rgba(22, 63, 109, 1), rgba(22, 63, 109, 0));
+      border-top-left-radius: 50%;
+      border-top-right-radius: 50%;
+      transform: rotate(3.5deg);
+      z-index: 2;
+    }
+
+    .header-button-white-space {
+      display: block;
+      z-index: 3;
+      background-color: $white;
+      width: 136px;
+      margin-top: 18px;
+      height: 34px;
+      position: absolute;
+    }
+
+    .phone {
+      position: absolute;
+      left: 17.7%;
+      bottom: 49.2%;
+    }
+
+    .email {
+      position: absolute;
+      left: 17.7%;
+      bottom: 29.5%;
+    }
+
+    .buttons-back-panel {
+      position: absolute;
+      margin: 0;
+      right: 17.6%;
+      bottom: 33%;
+
+      a:nth-child(1) {
+
+      }
+    }
+
+    .logo-footer {
+      margin: 11px 47.25% 0;
+      top: -29%;
+      left: 0.15%;
+      bottom: unset;
+      right: unset;
+    }
+  }
+}

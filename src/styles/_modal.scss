@@ -1,0 +1,337 @@
+@import '../styles/variables';
+@import '../styles/mixins';
+
+.section-modal {
+  z-index: 9999;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 0;
+
+  @include makeFlex(column, center, center);
+
+  .modal {
+    @include makeFlex(column, center, center);
+    background-color: transparent;
+    margin: 0 auto;
+    width: 50%;
+    height: 50%;
+    border-radius: 5px;
+    color: $blue;
+
+    .modal-content {
+      position: relative;
+      padding: 60px 20px;
+
+      .step-1 {
+        position: relative;
+        width: 280px;
+        height: 312px;
+        background-color: $white;
+        box-shadow: 0 3px 38px 0 rgba(31, 40, 53, 0.4);
+
+        .title {
+          padding: 54px 10px 0;
+          font-size: 24px;
+          font-weight: normal;
+          line-height: 34px;
+          text-align: center;
+        }
+
+        .form-button-back {
+          margin-top: 28px;
+        }
+
+        .close-button-one {
+          cursor: pointer;
+          width: 30px;
+          height: 30px;
+          position: absolute;
+          right: 8px;
+          top: 3px;
+          background: url("../images/close_black.svg") no-repeat 17px 7px;
+          background-size: 12px;
+        }
+      }
+
+      .step-2 {
+        position: relative;
+        width: 282px;
+        height: 431px;
+        background-color: $white;
+        box-shadow: 0 3px 38px 0 rgba(31, 40, 53, 0.4);
+
+        .title {
+          padding-top: 59px;
+          font-size: 24px;
+          font-weight: normal;
+          line-height: 100%;
+          text-align: center;
+        }
+
+        .card-num-title {
+          margin: 29px 0 9px 0;
+        }
+
+        img {
+          margin-top: 33px;
+        }
+
+        input {
+          width: 236px;
+          height: 62px;
+          border-radius: 50px;
+          border-width: 7px;
+
+          &::placeholder {
+            font-size: 15px;
+          }
+        }
+
+        .form-button-back {
+          margin-top: 36px;
+        }
+
+        .close-button-two {
+          cursor: pointer;
+          width: 30px;
+          height: 30px;
+          position: absolute;
+          right: 10px;
+          top: 3px;
+          background: url("../images/close_black.svg") no-repeat 17px 7px;
+          background-size: 12px;
+        }
+      }
+
+      .step-3 {
+        position: relative;
+        width: 280px;
+        height: 437px;
+        background-color: $white;
+        box-shadow: 0 3px 38px 0 rgba(31, 40, 53, 0.4);
+
+        .text {
+          width: 87%;
+          padding-top: 50px;
+          margin: 0 auto;
+          font-size: 16px;
+          line-height: 120%;
+          font-weight: 300;
+        }
+
+        .form-button-back {
+          margin-top: 18px;
+        }
+
+        .close-button-three {
+          cursor: pointer;
+          width: 30px;
+          height: 30px;
+          position: absolute;
+          right: 11px;
+          top: 8px;
+          background: url("../images/close_black.svg") no-repeat 17px 7px;
+          background-size: 12px;
+        }
+      }
+
+      .step-free {
+        position: relative;
+        width: 280px;
+        height: 437px;
+        background-color: $white;
+        box-shadow: 0 3px 38px 0 rgba(31, 40, 53, 0.4);
+
+        .text {
+          width: 87%;
+          padding-top: 50px;
+          margin: 0 auto;
+          font-size: 16px;
+          line-height: 120%;
+          font-weight: 300;
+        }
+
+        .form-button-back {
+          margin-top: 18px;
+        }
+      }
+    }
+
+    .cards {
+      display: block;
+      margin: 36px auto 0;
+    }
+
+    .card-num-title {
+      text-align: center;
+      display: block;
+      font-size: 18px;
+      font-weight: 500;
+      margin: 28px auto 10px;
+    }
+
+    .form-button-back {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      @include gradient(to right, rgba(206, 206, 216, 0), rgba(206, 206, 216, 1));
+      margin: 31px auto 0;
+      width: 236px;
+      height: 62px;
+      border-radius: 50px;
+    }
+
+    .button {
+      width: 221px;
+      height: 50px;
+      line-height: 48px;
+      background-color: $pink;
+      border-radius: 50px;
+      color: $white;
+      font-size: 18px;
+      font-weight: 800;
+      opacity: 0.85;
+      cursor: pointer;
+      text-align: center;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    input {
+      margin: 0 auto;
+      display: block;
+      text-align: center;
+      box-sizing: border-box;
+      width: 240px;
+      height: 58px;
+      border-radius: 2px;
+      font-size: 18px;
+      padding: 2px 12px;
+      color: $blue;
+      cursor: pointer;
+      border: 2px solid #b7b7bb;
+
+      &::placeholder {
+        font-size: 18px;
+        color: #b7b7bb;
+      }
+
+      &.error {
+        color: $pink;
+        border: 2px solid $pink;
+
+        &::placeholder {
+          color: $pink;
+        }
+      }
+    }
+
+    span.error {
+      font-size: 80%;
+      color: $pink;
+      text-align: center;
+      display: block;
+      margin-top: 3px
+    }
+
+    .text {
+      font-size: 16px;
+      //font-weight: 700;
+      text-align: center;
+      line-height: 138%;
+      font-weight: 300;
+    }
+  }
+
+  p {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  a {
+    color: $blue;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .section-modal {
+    .modal {
+      .modal-content {
+        .step-1 {
+          width: 778px;
+          height: 242px;
+
+          .title {
+            padding: 59px 0 0;
+            line-height: 100%;
+          }
+
+          .form-button-back {
+            margin-top: 32px;
+          }
+
+          .close-button-one {
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            right: 11px;
+            top: 5px;
+            background: url("../images/close_black.svg") no-repeat 17px 7px;
+            background-size: 12px;
+          }
+        }
+
+        .step-2 {
+          width: 778px;
+          height: 439px;
+
+          .title {
+            padding-top: 65px;
+          }
+
+          input {
+            width: 340px;
+
+            &::placeholder {
+              font-size: unset;
+            }
+          }
+
+          .close-button-two {
+            right: 11px;
+            top: 8px;
+          }
+        }
+
+        .step-3 {
+          width: 778px;
+          height: 384px;
+
+          .text {
+            padding-top: 43px;
+            font-size: 21px;
+          }
+        }
+
+        .step-free {
+          width: 778px;
+          height: 242px;
+
+          .form-button-back {
+            margin-top: 32px;
+          }
+        }
+      }
+    }
+  }
+}

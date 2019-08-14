@@ -1,0 +1,45 @@
+{
+  "name": "marketing_start_performance_marketing_landing",
+  "version": "1.0.0",
+  "description": "performance_marketing_landing",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack --watch",
+    "start:dev": "webpack-dev-server --host 0.0.0.0"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.4",
+    "@babel/node": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/preset-env": "^7.4.4",
+    "@types/jquery": "^3.3.22",
+    "autoprefixer": "^9.3.1",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.5",
+    "babel-preset-env": "^1.7.0",
+    "clean-webpack-plugin": "^2.0.2",
+    "css-loader": "^2.1.1",
+    "file-loader": "^3.0.1",
+    "image-webpack-loader": "^4.5.0",
+    "mini-css-extract-plugin": "^0.6.0",
+    "postcss-loader": "^3.0.0",
+    "sass": "^1.14.2",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webfonts-loader": "^4.1.0",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^3.3.1"
+  },
+  "dependencies": {
+    "node-sass": "^4.12.0",
+    "phone-masks": "^1.0.3",
+    "resolve-url-loader": "^3.1.0",
+    "script-loader": "^0.7.2",
+    "smoothscroll-polyfill": "^0.4.4"
+  }
+}

@@ -1,0 +1,120 @@
+@import '../styles/variables';
+@import '../styles/mixins';
+
+.diploma {
+  width: 100%;
+  color: $diploma-section-font-color;
+  height: $diploma-section-height;
+
+  .diploma-title {
+    text-align: center;
+    margin-top: 65px;
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  .diploma-text {
+    font-size: 18px;
+    line-height: 33px;
+    margin: 37px auto 0;
+    width: 282px;
+
+    .performance-profession {
+      font-size: 17px;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+  }
+
+  .diploma-text-two {
+    margin-top: 27px;
+  }
+
+  .diploma-image {
+    width: 320px;
+    height: 280px;
+    background: url("../images/cert.png") no-repeat -40px 8px;
+    background-size: 388px;
+    margin: 0 auto;
+  }
+
+  .want-certificate-button-back {
+    position: relative;
+    @include gradient(to right, rgba(206, 206, 216, 0), rgba(206, 206, 216, 1));
+    margin: 13px auto 0;
+    width: 196px;
+    height: 61px;
+    border-radius: 50px;
+    cursor: pointer;
+
+    &:active {
+      opacity: 0.7;
+    }
+  }
+
+  .want-certificate-button {
+    background: url("../images/button_without_gradient.png") no-repeat 6px 6px;
+    height: 63px;
+    margin: 0 auto;
+    text-align: center;
+
+    .want-certificate-button-text {
+      position: relative;
+      top: 20px;
+      right: 0;
+      color: white;
+      font-size: 18px;
+    }
+  }
+}
+
+@media screen and (min-width: 1280px){
+  .diploma {
+    position: relative;
+    background-color: $gray;
+    height: 637px;
+
+    .diploma-title {
+      text-align: left;
+      padding-top: 101px;
+      width: 65.5%;
+      letter-spacing: -0.8px;
+      margin: 0 auto;
+      font-size: 61px;
+    }
+
+    .diploma-text {
+      width: 26%;
+      margin: 51px 0 0 17.4%;
+      font-size: 18px;
+      line-height: 32px;
+
+      br {
+        display: none;
+      }
+
+      .performance-profession {
+        font-size: 18px;
+      }
+    }
+
+    .diploma-text-two {
+      margin-top: 31px;
+      line-height: 32px;
+    }
+
+    .diploma-image {
+      background: url("../images/diploma_image_new.png") no-repeat center center;
+      position: absolute;
+      top: 13.8%;
+      right: 22.2%;
+      background-size: 100%;
+      width: 31.2%;
+      height: 74%;
+    }
+
+    .want-certificate-button-back {
+      margin: 3.75% 0 0 17.34%;
+    }
+  }
+}

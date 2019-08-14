@@ -1,0 +1,42 @@
+@mixin makeFlex($flex-direction, $justify-content, $align-items) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+@mixin squareContainer($side) {
+  width: $side;
+  height: $side;
+}
+
+@mixin gradient($direction, $start-color, $end-color) {
+  background-image: linear-gradient($direction, $start-color, $end-color);
+  background-image: -o-linear-gradient($direction, $start-color, $end-color);
+  background-image: -moz-linear-gradient($direction, $start-color, $end-color);
+  background-image: -webkit-linear-gradient($direction, $start-color, $end-color);
+  background-image: -ms-linear-gradient($direction, $start-color, $end-color);
+}
+
+//@function strip-unit($value) {
+//  @return $value / ($value * 0 + 1);
+//}
+//
+//@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+//  $u1: unit($min-vw);
+//  $u2: unit($max-vw);
+//  $u3: unit($min-font-size);
+//  $u4: unit($max-font-size);
+//
+//  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+//    & {
+//      font-size: $min-font-size;
+//      @media screen and (min-width: $min-vw) {
+//        font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+//      }
+//      @media screen and (min-width: $max-vw) {
+//        font-size: $max-font-size;
+//      }
+//    }
+//  }
+//}
